@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.twilight.zhiyu">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <!--
+      Android 11 以后，不写这段就「看不见」别的 App，
+      resolveActivity() 会返回 null —— 之前一直用不了系统裁剪器就是这个原因。
+    -->
+    <queries>
+        <intent>
+            <action android:name="com.android.camera.action.CROP" />
+            <data android:mimeType="image/*" />
+        </intent>
+        <package android:name="tv.danmaku.bili" />
+        <package android:name="com.tencent.mobileqq" />
+    </queries>
+
+    <application
+        android:allowBackup="true"
+        android:hardwareAccelerated="true"
+        android:icon="@mipmap/ic_launcher"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:label="@string/app_name"
+        android:supportsRtl="false"
+        android:usesCleartextTraffic="true"
+        android:theme="@style/AppTheme">
+
+        <activity
+            android:name=".MainActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden|uiMode"
+            android:exported="true"
+            android:windowSoftInputMode="adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".ChatActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden|uiMode"
+            android:windowSoftInputMode="adjustResize" />
+
+        <activity
+            android:name=".CreateActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden|uiMode"
+            android:windowSoftInputMode="adjustResize" />
+
+        <activity
+            android:name=".CropActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden|uiMode"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".SettingsActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden|uiMode"
+            android:windowSoftInputMode="adjustResize" />
+
+        <activity
+            android:name=".ApiActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden|uiMode"
+            android:windowSoftInputMode="adjustResize" />
+
+        <activity
+            android:name=".ApiEditActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden|uiMode"
+            android:windowSoftInputMode="adjustResize" />
+
+        <activity
+            android:name=".ProfileEditActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden|uiMode"
+            android:windowSoftInputMode="adjustResize" />
+
+        <activity
+            android:name=".UserProfileActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden|uiMode"
+            android:windowSoftInputMode="adjustResize" />
+
+        <activity
+            android:name=".R18Activity"
+            android:configChanges="orientation|screenSize|keyboardHidden|uiMode"
+            android:windowSoftInputMode="adjustResize" />
+
+        <activity
+            android:name=".AboutActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden|uiMode"
+            android:windowSoftInputMode="adjustResize" />
+
+    </application>
+
+</manifest>
