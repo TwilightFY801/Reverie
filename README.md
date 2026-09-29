@@ -7,11 +7,6 @@
 界面全部用原生 `View` 手写绘制，**不依赖 AndroidX、不依赖 Gradle、没有任何第三方库**，
 整个 App 编译完不到 1 MB。
 
-<p align="center">
-  <img src="screenshots/01-mine.png" width="300" alt="我的智能体">
-  <img src="screenshots/02-chat.png" width="300" alt="聊天">
-</p>
-
 ---
 
 ## 功能
@@ -141,7 +136,7 @@ Reverie/
 │       └── GlassView.java          毛玻璃采样视图
 ├── examples/
 │   └── example-agent.zip    示例角色卡（可直接导入）
-└── screenshots/
+└── LICENSE
 ```
 
 ---
